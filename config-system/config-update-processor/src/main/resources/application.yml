@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: config-update-processor
+
+  kafka:
+    bootstrap-servers: localhost:9092
+
+    consumer:
+      group-id: config-update-processor
+      auto-offset-reset: earliest
+
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+
+      properties:
+        # Delegate actual JSON deserialization
+        spring.deserializer.value.delegate.class: org.springframework.kafka.support.serializer.JsonDeserializer
+
+        # Trust all packages (safe for local dev)
+        spring.json.trusted.packages: "*"
+
+        # Always deserialize into this class
+        spring.json.value.default.type: com.emilyordanov.configupdateprocessor.event.ConfigurationChangeEvent
+
+        # Ignore Kafka type headers (CRITICAL)
+        spring.json.use.type.headers: false

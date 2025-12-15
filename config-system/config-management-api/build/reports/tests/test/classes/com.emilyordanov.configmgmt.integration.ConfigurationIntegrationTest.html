@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ConfigurationIntegrationTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ConfigurationIntegrationTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.emilyordanov.configmgmt.integration.html">com.emilyordanov.configmgmt.integration</a> &gt; ConfigurationIntegrationTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">2.385s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+<li>
+<a href="#">Standard error</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">deleteShouldSoftDeleteAndLatestShouldReturn404IfNoOtherVersions()</td>
+<td class="success">2.220s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldCreateAndFetchLatestConfiguration()</td>
+<td class="success">0.031s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldReturnSameLatestPayloadOnSecondCall()</td>
+<td class="success">0.059s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updateShouldCreateNewVersionAndLatestShouldReflectIt()</td>
+<td class="success">0.075s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>23:30:08.512 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.emilyordanov.configmgmt.integration.ConfigurationIntegrationTest]: ConfigurationIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:30:08.658 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.emilyordanov.configmgmt.ConfigManagementApiApplication for test class com.emilyordanov.configmgmt.integration.ConfigurationIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v3.2.12)
+
+2025-12-15T23:30:09.487+02:00  INFO 6332 --- [    Test worker] c.e.c.i.ConfigurationIntegrationTest     : Starting ConfigurationIntegrationTest using Java 21.0.9 with PID 6332 (started by scott in D:\Personal\Projects\config-system\config-management-api)
+2025-12-15T23:30:09.487+02:00  INFO 6332 --- [    Test worker] c.e.c.i.ConfigurationIntegrationTest     : The following 1 profile is active: &quot;test&quot;
+2025-12-15T23:30:10.905+02:00  INFO 6332 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-15T23:30:10.905+02:00  INFO 6332 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-15T23:30:11.080+02:00  INFO 6332 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 166 ms. Found 1 JPA repository interface.
+2025-12-15T23:30:11.112+02:00  INFO 6332 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-15T23:30:11.112+02:00  INFO 6332 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-15T23:30:11.147+02:00  INFO 6332 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.emilyordanov.configmgmt.repository.ConfigurationRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-15T23:30:11.147+02:00  INFO 6332 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-12-15T23:30:12.197+02:00  INFO 6332 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-12-15T23:30:12.218+02:00  INFO 6332 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-15T23:30:12.218+02:00  INFO 6332 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-15T23:30:12.350+02:00  INFO 6332 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-15T23:30:12.350+02:00  INFO 6332 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2822 ms
+2025-12-15T23:30:12.537+02:00  INFO 6332 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-15T23:30:12.824+02:00  INFO 6332 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5ad0c70a
+2025-12-15T23:30:12.827+02:00  INFO 6332 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-15T23:30:12.930+02:00  INFO 6332 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2025-12-15T23:30:12.930+02:00  INFO 6332 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2025-12-15T23:30:12.930+02:00  INFO 6332 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : 
+2025-12-15T23:30:12.964+02:00  INFO 6332 --- [    Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5433/configdb (PostgreSQL 15.15)
+2025-12-15T23:30:13.038+02:00  INFO 6332 --- [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.044s)
+2025-12-15T23:30:13.066+02:00  INFO 6332 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema &quot;public&quot;: 2
+2025-12-15T23:30:13.076+02:00  INFO 6332 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Schema &quot;public&quot; is up to date. No migration necessary.
+2025-12-15T23:30:13.214+02:00  INFO 6332 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-15T23:30:13.322+02:00  INFO 6332 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
+2025-12-15T23:30:13.387+02:00  INFO 6332 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-15T23:30:13.685+02:00  INFO 6332 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-15T23:30:14.657+02:00  INFO 6332 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-15T23:30:14.704+02:00  INFO 6332 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15T23:30:16.652+02:00  INFO 6332 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 63712 (http) with context path ''
+2025-12-15T23:30:16.655+02:00  INFO 6332 --- [    Test worker] c.e.c.i.ConfigurationIntegrationTest     : Started ConfigurationIntegrationTest in 7.704 seconds (process running for 9.338)
+2025-12-15T23:30:17.309+02:00  INFO 6332 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-15T23:30:17.309+02:00  INFO 6332 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-15T23:30:17.319+02:00  INFO 6332 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2025-12-15T23:30:17.745+02:00 DEBUG 6332 --- [o-auto-1-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.app_name=? 
+        and c1_0.env=? 
+    order by
+        c1_0.version desc 
+    fetch
+        first ? rows only
+2025-12-15T23:30:17.780+02:00 DEBUG 6332 --- [o-auto-1-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.id=?
+2025-12-15T23:30:17.822+02:00 DEBUG 6332 --- [o-auto-1-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        configurations
+        (app_name, created_at, data, deleted_at, env, updated_at, version, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-15T23:30:18.266+02:00  INFO 6332 --- [o-auto-1-exec-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2025-12-15T23:30:18.394+02:00  INFO 6332 --- [o-auto-1-exec-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-12-15T23:30:18.442+02:00  INFO 6332 --- [o-auto-1-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2025-12-15T23:30:18.442+02:00  INFO 6332 --- [o-auto-1-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2025-12-15T23:30:18.442+02:00  INFO 6332 --- [o-auto-1-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1765834218442
+2025-12-15T23:30:18.756+02:00  INFO 6332 --- [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: zobpDgM8Tgios80zKyd9Bg
+2025-12-15T23:30:18.757+02:00  INFO 6332 --- [ad | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 2 with epoch 0
+2025-12-15T23:30:18.814+02:00 DEBUG 6332 --- [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.id=? 
+        and c1_0.deleted_at is null
+2025-12-15T23:30:18.824+02:00 DEBUG 6332 --- [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.id=?
+2025-12-15T23:30:18.831+02:00 DEBUG 6332 --- [o-auto-1-exec-2] org.hibernate.SQL                        : 
+    update
+        configurations 
+    set
+        app_name=?,
+        created_at=?,
+        data=?,
+        deleted_at=?,
+        env=?,
+        updated_at=?,
+        version=? 
+    where
+        id=?
+2025-12-15T23:30:18.858+02:00 DEBUG 6332 --- [o-auto-1-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.app_name=? 
+        and c1_0.env=? 
+        and c1_0.deleted_at is null 
+    order by
+        c1_0.version desc 
+    fetch
+        first ? rows only
+2025-12-15T23:30:18.913+02:00 DEBUG 6332 --- [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.app_name=? 
+        and c1_0.env=? 
+    order by
+        c1_0.version desc 
+    fetch
+        first ? rows only
+2025-12-15T23:30:18.917+02:00 DEBUG 6332 --- [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.id=?
+2025-12-15T23:30:18.919+02:00 DEBUG 6332 --- [o-auto-1-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        configurations
+        (app_name, created_at, data, deleted_at, env, updated_at, version, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-15T23:30:18.932+02:00 DEBUG 6332 --- [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.id=? 
+        and c1_0.deleted_at is null
+2025-12-15T23:30:18.935+02:00 DEBUG 6332 --- [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.app_name=? 
+        and c1_0.env=? 
+    order by
+        c1_0.version desc 
+    fetch
+        first ? rows only
+2025-12-15T23:30:18.938+02:00 DEBUG 6332 --- [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.id=?
+2025-12-15T23:30:18.941+02:00 DEBUG 6332 --- [o-auto-1-exec-5] org.hibernate.SQL                        : 
+    insert 
+    into
+        configurations
+        (app_name, created_at, data, deleted_at, env, updated_at, version, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-15T23:30:18.953+02:00 DEBUG 6332 --- [o-auto-1-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.app_name=? 
+        and c1_0.env=? 
+        and c1_0.deleted_at is null 
+    order by
+        c1_0.version desc 
+    fetch
+        first ? rows only
+2025-12-15T23:30:18.975+02:00 DEBUG 6332 --- [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.app_name=? 
+        and c1_0.env=? 
+    order by
+        c1_0.version desc 
+    fetch
+        first ? rows only
+2025-12-15T23:30:18.977+02:00 DEBUG 6332 --- [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.id=?
+2025-12-15T23:30:18.981+02:00 DEBUG 6332 --- [o-auto-1-exec-7] org.hibernate.SQL                        : 
+    insert 
+    into
+        configurations
+        (app_name, created_at, data, deleted_at, env, updated_at, version, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-15T23:30:18.994+02:00 DEBUG 6332 --- [o-auto-1-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.app_name=? 
+        and c1_0.env=? 
+        and c1_0.deleted_at is null 
+    order by
+        c1_0.version desc 
+    fetch
+        first ? rows only
+2025-12-15T23:30:19.010+02:00 DEBUG 6332 --- [o-auto-1-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.app_name=? 
+        and c1_0.env=? 
+    order by
+        c1_0.version desc 
+    fetch
+        first ? rows only
+2025-12-15T23:30:19.015+02:00 DEBUG 6332 --- [o-auto-1-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.id=?
+2025-12-15T23:30:19.018+02:00 DEBUG 6332 --- [o-auto-1-exec-9] org.hibernate.SQL                        : 
+    insert 
+    into
+        configurations
+        (app_name, created_at, data, deleted_at, env, updated_at, version, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-15T23:30:19.032+02:00 DEBUG 6332 --- [-auto-1-exec-10] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.app_name,
+        c1_0.created_at,
+        c1_0.data,
+        c1_0.deleted_at,
+        c1_0.env,
+        c1_0.updated_at,
+        c1_0.version 
+    from
+        configurations c1_0 
+    where
+        c1_0.app_name=? 
+        and c1_0.env=? 
+        and c1_0.deleted_at is null 
+    order by
+        c1_0.version desc 
+    fetch
+        first ? rows only
+</pre>
+</span>
+</div>
+<div class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>WARNING: A Java agent has been loaded dynamically (C:\Users\scott\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.19\154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1\byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 9.0.0</a> at Dec 15, 2025, 11:30:19 PM</p>
+</div>
+</div>
+</body>
+</html>

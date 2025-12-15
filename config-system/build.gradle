@@ -1,0 +1,31 @@
+plugins {
+    id 'base'
+}
+
+allprojects {
+    group = 'com.emilyordanov.configsystem'
+    version = '0.1.0'
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    // Everyone compiles with Java 21 toolchain
+    apply plugin: 'java'
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(21)
+        }
+    }
+
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = 'UTF-8'
+    }
+
+    tasks.withType(Test).configureEach {
+        useJUnitPlatform()
+    }
+}
