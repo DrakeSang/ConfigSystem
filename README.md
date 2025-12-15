@@ -1,5 +1,3 @@
-Configuration Management System
-Overview
 This project implements a simplified but realistic Configuration Management System designed for a microservices ecosystem. The system allows teams to create, version, distribute, and consume application configurations in a consistent, scalable, and decoupled way.
 Although intentionally simplified, the solution covers key backend engineering concepts including RESTful APIs, database migrations, caching, event-driven architecture with Kafka, client SDK design, and local development using Docker Compose. The project is implemented incrementally in clearly defined steps to demonstrate design decisions and trade-offs at each stage.
 The system is built using Java 21, Spring Boot 3.2, Gradle (multi-module), PostgreSQL, Redis, and Kafka, following modern backend best practices.
